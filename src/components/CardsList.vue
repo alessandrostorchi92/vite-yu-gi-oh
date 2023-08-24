@@ -1,7 +1,11 @@
 <script>
 import axios from 'axios';
+import CardItem from './CardItem.vue';
 
 export default {
+    components: {
+        CardItem
+    },
     data() {
         return {
             cards: [],
@@ -35,22 +39,14 @@ export default {
 
 <template>
 
-    <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-4 g-4">
+    <div class="row row-cols-sm-1 row-cols-md-3 row-cols-lg-5 g-4">
 
         <div class="col" v-for="card in cards" :key="card.id">
-            <div class="card h-100 ">
-                <img :src="card.card_images[0].image_url" class="card-img-top" alt="immagine carta">
-                <div class="card-body d-flex flex-column">
-                    <h5 class="card-title">{{ card.name }}</h5>
-                    <p class="card-text">{{ card.desc }}</p>
-                    <a :href="card.card_images[0].image_url_cropped" class="btn btn-primary mt-auto">Mostra</a>
-                </div>
-            </div>
-
+            <CardItem></CardItem>
         </div>
 
     </div>
-    
+
 </template>
 
 <style lang="scss" scoped></style>

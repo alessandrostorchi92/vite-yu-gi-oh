@@ -15,7 +15,7 @@ createApp(App).mount('#app')
 //TODO: 4) Aggiungo nel methods{} la funzione "fetchCards()", dove inserirò la funzione axios.get..;
 //TODO: 5) Accedo ai dati delle carte con la risposta di axios mediante il return della funzione axios.get..;
 //TODO: 6) Verifico su console.vue se i dati sono stati salvati nel data() del componente;
-//TODO: 7) Stampo i dati in html all'interno del tag <template></template> del file CardsList.vue con "v-for"
-//TODO: 8)
+//TODO: 7) Stampo i dati una volta immessi nel data() in html all'interno del tag <template></template> del componente CardsList.vue con "v-for"
+//TODO: 8) Creo un nuovo componente per la singola card "CardItem.vue"
 //TODO: 9) 
 
