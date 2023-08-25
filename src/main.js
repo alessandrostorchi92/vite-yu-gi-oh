@@ -5,7 +5,9 @@ import "bootstrap/dist/js/bootstrap.js"
 
 createApp(App).mount('#app')
 
-// Consegna: Descrizione: Crea un nuovo progetto utilizzando Vite e Vue 3 e definisci i componenti necessari per strutturare il layout come da screenshot allegato. Al caricamento della pagina, effettua una chiama ajax all’API di Yu Gi Oh e con i dati restituiti, stampa una card per ogni carta.
+// Consegna: Descrizione: Crea un nuovo progetto utilizzando Vite e Vue 3 e definisci i componenti necessari per strutturare il layout come da screenshot allegato. Al caricamento della pagina, effettua una chiama ajax all’API di Yu Gi Oh e con i dati restituiti, stampa una card per ogni carta.Aggiungi una select per filtrare i risultati in base all’archetipo.
+
+// Le option della select devono essere popolate dinamicamente chiamando questo endpoint dell’api: https://db.ygoprodeck.com/api/v7/archetypes.php
 
 //TODO:Processo Logico:
 
@@ -18,4 +20,12 @@ createApp(App).mount('#app')
 //TODO: 7) Stampo i dati una volta immessi nel data() in html all'interno del tag <template></template> del componente CardsList.vue con "v-for"
 //TODO: 8) Creo un nuovo componente per la singola card "CardItem.vue"
 //TODO: 9) Devo trasferire al componente CardsList le informazioni di cui ha bisogno. Per farlo utilizzo le "props"
+//TODO: 10) Per scaricare il resto delle vado a pescare le informaizoni relative all'impaginazione su network console
+//TODO: 11) Dopodichè salvo quelle info in unìaltra variabile da inserire nel data()
+//TODO: 12) Fisso la pagina corrente attraverso una variabile currentPage: 1,
+//TODO: 13) Per scaricare al click sul button nuove carte utilizzo @click,
+//TODO: 14) Per scaricare al click sul button nuove carte utilizzo @click,
+
+
+
 

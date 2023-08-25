@@ -5,7 +5,7 @@ export default {
 </script>
 
 <template>
-    <nav class="navbar bg-body-tertiary">
+    <nav class="navbar bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <img src="../assets/logo.png" alt="Bootstrap" width="150" height="50">
@@ -18,4 +18,6 @@ export default {
     </nav>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+
+</style>

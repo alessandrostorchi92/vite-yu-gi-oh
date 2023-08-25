@@ -26,8 +26,4 @@ components: {
 
 <style lang="scss">
 
-body {
-    background-color: #aea04b ;
-}
-
 </style>
