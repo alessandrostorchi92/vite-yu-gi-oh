@@ -17,5 +17,5 @@ createApp(App).mount('#app')
 //TODO: 6) Verifico su console.vue se i dati sono stati salvati nel data() del componente;
 //TODO: 7) Stampo i dati una volta immessi nel data() in html all'interno del tag <template></template> del componente CardsList.vue con "v-for"
 //TODO: 8) Creo un nuovo componente per la singola card "CardItem.vue"
-//TODO: 9) 
+//TODO: 9) Devo trasferire al componente CardsList le informazioni di cui ha bisogno. Per farlo utilizzo le "props"
 

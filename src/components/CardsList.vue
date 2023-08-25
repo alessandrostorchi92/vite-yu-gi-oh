@@ -1,10 +1,10 @@
 <script>
 import axios from 'axios';
-import CardItem from './CardItem.vue';
+import SingleCard from './SingleCard.vue';
 
 export default {
     components: {
-        CardItem
+        SingleCard
     },
     data() {
         return {
@@ -30,6 +30,9 @@ export default {
         },
 
     },
+
+     //appena si carica il componente (e quindi anche la pagina) eseguo la chiamata axios
+     
     mounted() {
         this.fetchCards();
     }
@@ -42,7 +45,7 @@ export default {
     <div class="row row-cols-sm-1 row-cols-md-3 row-cols-lg-5 g-4">
 
         <div class="col" v-for="card in cards" :key="card.id">
-            <CardItem></CardItem>
+            <SingleCard :card="card.id"></SingleCard>
         </div>
 
     </div>

@@ -8,7 +8,7 @@ export default {
 components: {
     TheNavbar,
     TheFooter,
-    CardsList
+    CardsList,
 }
 }
 
