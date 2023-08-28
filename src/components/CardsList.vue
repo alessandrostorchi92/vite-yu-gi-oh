@@ -1,18 +1,31 @@
 <script>
 import axios from 'axios';
 import SingleCard from './SingleCard.vue';
+import { store } from '../store';
 
 export default {
+
     components: {
         SingleCard
     },
+
     data() {
         return {
             cards: [],
             paginationInfo: {},
             currentPage: 1,
+            store,
         };
     },
+
+    watch: {
+        // Ogni volta che store.searchText cambia eseguo questa funzione 
+        "store.searchText": function (newSearchText) {
+            this.cards = [];
+            this.fetchCards(`https://db.ygoprodeck.com/api/v7/cardinfo.php?num=100&offset=0&fname=${newSearchText.toLowerCase()}`)
+        }
+    },
+
     methods: {
 
         //Questa funzione deve essere invocata nel mounted{} così da riuscire a visualizzare il contenuto una volta aperta la pagina web
@@ -36,7 +49,7 @@ export default {
 
                 this.cards.push(...response.data.data);
                 this.paginationInfo = response.data.meta;
-            });
+            }).catch(() => { alert("nessun dato trovato") });
 
         },
 
@@ -48,8 +61,8 @@ export default {
 
     },
 
-     //appena si carica il componente (e quindi anche la pagina) eseguo la chiamata axios
-      
+    //appena si carica il componente (e quindi anche la pagina) eseguo la chiamata axios
+
     mounted() {
         this.fetchCards();
     }
@@ -58,15 +71,14 @@ export default {
 </script>
 
 <template>
-
     <div class="py-5">
 
         <div class="row row-cols-sm-1 row-cols-md-3 row-cols-lg-5 g-4">
-    
+
             <div class="col" v-for="card in cards" :key="card.id">
                 <SingleCard :card="card"></SingleCard>
             </div>
-    
+
         </div>
 
         <div class="text-center py-5">
@@ -76,8 +88,6 @@ export default {
         </div>
 
     </div>
-
-
 </template>
 
 <style lang="scss" scoped></style>
